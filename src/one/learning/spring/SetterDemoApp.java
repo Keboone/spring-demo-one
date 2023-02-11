@@ -8,7 +8,7 @@ public class SetterDemoApp
 	{
 		
 		// load the spring configuration file
-		// retrieve bean from the spring container
+		// retrieve (odzyskać, wyszukać informacje) bean from the spring container
 		// call methods on the bean
 		// close the context
 		
@@ -17,7 +17,7 @@ public class SetterDemoApp
 		Coach cricketCoach = context.getBean("myCricketCoach", CricketCoach.class);
 		
 		System.out.println(cricketCoach.getDailyWorkout());
-		// System.out.println(cricketCoach.getDailyForutne());
+		System.out.println(cricketCoach.getDailyForutne());
 		
 		context.close();
 		
