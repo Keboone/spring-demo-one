@@ -17,7 +17,7 @@ public class SetterDemoApp
 		Coach cricketCoach = context.getBean("myCricketCoach", CricketCoach.class);
 		
 		System.out.println(cricketCoach.getDailyWorkout());
-		System.out.println(cricketCoach.getDailyForutne());
+		// System.out.println(cricketCoach.getDailyForutne());
 		
 		context.close();
 		
