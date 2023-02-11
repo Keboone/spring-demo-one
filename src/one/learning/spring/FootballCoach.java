@@ -7,7 +7,6 @@ public class FootballCoach implements Coach
 		
 	public FootballCoach(){}
 	
-	
 	public FootballCoach(FortuneService fortuneService) 
 	{
 		this.fortuneService = fortuneService;

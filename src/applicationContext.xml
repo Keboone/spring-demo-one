@@ -16,7 +16,7 @@
     	<property name="printedLoggerLevel" value="FINE"/>
     </bean>
     
-    <!-- define the dependency -->
+    <!-- define the dependency(zależność) -->
     <bean id="myFortuneService" 
     	class="one.learning.spring.HappyFortuneService">
     </bean>
@@ -34,7 +34,13 @@
     	
     		<!-- set up setter injection -->
     		<property name="fortuneService" ref="myFortuneService" />
+    		
+    		<!-- inject literal values -->
+    		<property name="emailAddress" value="thebestcoach@gmail.com" />
+    		<property name="team" value="Wojownicy światła" />
+    		
     </bean>
+    
     
     
 </beans>

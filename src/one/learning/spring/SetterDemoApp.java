@@ -14,10 +14,16 @@ public class SetterDemoApp
 		
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		
-		Coach cricketCoach = context.getBean("myCricketCoach", CricketCoach.class);
+		CricketCoach theCoach = context.getBean("myCricketCoach", CricketCoach.class);
 		
-		System.out.println(cricketCoach.getDailyWorkout());
-		System.out.println(cricketCoach.getDailyForutne());
+		System.out.println(theCoach.getDailyWorkout());
+		System.out.println(theCoach.getDailyForutne());
+		
+		// call new methods	to get literal values (dosłowne wartości) 
+		
+		System.out.println(theCoach.getEmailAddress());
+		System.out.println(theCoach.getTeam());
+		
 		
 		context.close();
 		

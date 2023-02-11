@@ -5,6 +5,8 @@ public class CricketCoach implements Coach
 	private FortuneService fortuneService;
 	
 	
+	private String emailAddress;
+	private String team;
 	
 	// create no-args construcor
 	public CricketCoach()
@@ -19,10 +21,35 @@ public class CricketCoach implements Coach
 		this.fortuneService = fortuneService;
 	}
 	
+	
+	public void setEmailAddress(String emailAddress)
+	{
+		System.out.println("we are in setter method for CricketCoach - setEmailAddress");
+		this.emailAddress = emailAddress;
+	}
+
+	public void setTeam(String team) 
+	{
+		System.out.println("we are in setter method for CricketCoach - setTeam");
+		this.team = team;
+	}
+	
+	public String getEmailAddress() 
+	{
+		return emailAddress;
+	}
+
+	public String getTeam() 
+	{
+		return team;
+	}
+	
+	
+	
 	@Override
 	public String getDailyWorkout() 
 	{
-		return "Bating practise for 2h";
+		return "Cricket practise for 2h";
 	}
 
 	@Override
