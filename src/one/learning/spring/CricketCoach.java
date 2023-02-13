@@ -14,14 +14,13 @@ public class CricketCoach implements Coach
 		System.out.println("we are in no-args constructor");
 	}
 	
-	// create setter method
+	// create setter method for the object FortuneService
 	public void setFortuneService(FortuneService fortuneService)
 	{
 		System.out.println("we are in setter method for CricketCoach - setFortuneSetter");
 		this.fortuneService = fortuneService;
 	}
-	
-	
+	// settery do zmiennych
 	public void setEmailAddress(String emailAddress)
 	{
 		System.out.println("we are in setter method for CricketCoach - setEmailAddress");
@@ -34,6 +33,7 @@ public class CricketCoach implements Coach
 		this.team = team;
 	}
 	
+	// gettery
 	public String getEmailAddress() 
 	{
 		return emailAddress;

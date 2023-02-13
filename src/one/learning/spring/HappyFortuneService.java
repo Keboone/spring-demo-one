@@ -2,6 +2,7 @@ package one.learning.spring;
 
 public class HappyFortuneService implements FortuneService
 {
+	
 	@Override
 	public String getFortune()
 	{
