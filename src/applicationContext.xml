@@ -6,21 +6,25 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
-
+	
+	
+	<!-- Beany to obiekty w Java!!!!!!!!!!! -->
+	
+	
     <!-- Define your beans here -->
     
-    
-    <!-- visability of logs -->
+    <!-- visability of logs, czyli widoczność logów w konsoli-->
     <bean id="myLoggerConfig" class="one.learning.spring.MyLoggerConfig" init-method="initLogger">
     	<property name="rootLoggerLevel" value="FINE" />
     	<property name="printedLoggerLevel" value="FINE"/>
     </bean>
     
-   <!--  komentarz: define the dependency(zależność) 
+   <!-- define the dependency(zależność) 
     <bean id="myFortuneService" 
     	class="one.learning.spring.HappyFortuneService">
     </bean> -->
     
+    <!-- zmiana dependency injection z happy na random -->
      <bean id="myFortuneService" 
    		class="one.learning.spring.RandomFortuneService">
     </bean>
@@ -32,7 +36,7 @@
     		<constructor-arg ref="myFortuneService" />
     </bean>
     
-    <!-- load the properties(właściwości) file: sport.properties -->
+    <!-- load the properties(właściwości)from the file: sport.properties -->
     <context:property-placeholder location="classpath:sport.properties" />
     
     <bean id="myCricketCoach" 
@@ -41,7 +45,7 @@
     		<!-- set up setter injection -->
     		<property name="fortuneService" ref="myFortuneService" />
     		
-    		<!-- inject literal values -->
+    		<!-- inject literal values from the file: sport.properties -->
     		<property name="emailAddress" value="${foo.email}" />
     		<property name="team" value="${foo.team}" />
     </bean>

@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class RandomFortuneService implements FortuneService
 {
-	List listOfFortunes = Arrays.asList("Today is your lucky day!", "Not a lucky day!", "Normal day!");
+	List<String> listOfFortunes = Arrays.asList("Today is your lucky day!", "Not a lucky day!", "Normal day!");
 	
 	private Random rand = new Random();
 	
@@ -15,9 +15,9 @@ public class RandomFortuneService implements FortuneService
 	{
 		int index = rand.nextInt(listOfFortunes.size());
 		
-		String yourFortune = (String) listOfFortunes.get(index);
+		String yourFortune = listOfFortunes.get(index);
 		
-		return yourFortune;
+		return listOfFortunes.size() + " " + yourFortune + " " + index;
 	}
 	
 	

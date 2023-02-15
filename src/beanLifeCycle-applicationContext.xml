@@ -29,28 +29,16 @@
    		class="one.learning.spring.RandomFortuneService">
     </bean>
     
+    
+    <!-- tu żeby użyc singleton trzeba zamienić scope="prototype" na scope="singleton" -->
     <bean id="myCoach" 
-    	class="one.learning.spring.FootballCoach">
+    	class="one.learning.spring.TrackCoach"
+    	init-method="doMyStartUpStuff"
+    	destroy-method="doMyCleanUpStuff">
     	
     		<!-- set up constructor injection -->
     		<constructor-arg ref="myFortuneService" />
     </bean>
-    
-    <!-- load the properties(właściwości)from the file: sport.properties -->
-    <context:property-placeholder location="classpath:sport.properties" />
-    
-    <bean id="myCricketCoach" 
-    	class="one.learning.spring.CricketCoach">
-    	
-    		<!-- set up setter injection -->
-    		<property name="fortuneService" ref="myFortuneService" />
-    		
-    		<!-- inject literal values from the file: sport.properties -->
-    		<property name="emailAddress" value="${foo.email}" />
-    		<property name="team" value="${foo.team}" />
-    </bean>
-    
-   
     
     
     
