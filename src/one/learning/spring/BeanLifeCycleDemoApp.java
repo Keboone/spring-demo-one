@@ -9,12 +9,13 @@ public class BeanLifeCycleDemoApp
 	{
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("beanLifeCycle-applicationContext.xml");
 		
-		Coach theCoach = context.getBean("myCoach", Coach.class);
+		TrackCoach theCoach = context.getBean("myCoach", TrackCoach.class);
 		
 		System.out.println(theCoach.getDailyWorkout());
 		System.out.println(theCoach.getDailyForutne());
 //		theCoach.doMyStartUpStuff();
-//		theCoach.doMyCleanUpStuff();
+//		theCoach.doMyCleanUpStuff(); // te dwie metody wykonują się automatycznie
+		
 		
 		context.close();
 		

@@ -36,6 +36,9 @@
     	init-method="doMyStartUpStuff"
     	destroy-method="doMyCleanUpStuff">
     	
+    	<!-- dodając scope="prototype" do beanu powyżej powoduje 
+    	że metoda destroy sie nie wykonuje, działa ona tylko dla singleton -->
+    	
     		<!-- set up constructor injection -->
     		<constructor-arg ref="myFortuneService" />
     </bean>
